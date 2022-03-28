@@ -25,7 +25,7 @@ $query_builder = TRUE;
 
 
 
-$conn = mysqli_connect("eu-cdbr-west-02.cleardb.net", "b49407036ab3d6", "dcca5948", "heroku_6f25953872e8cc7");
+$conn = mysqli_query("eu-cdbr-west-02.cleardb.net", "b49407036ab3d6", "dcca5948", "heroku_6f25953872e8cc7");
 if (!$conn) {
     echo "Connection Failed";
 }
