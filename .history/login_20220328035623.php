@@ -1,8 +1,10 @@
 <?php
 session_start();
 include "connection.php";
+echo "hello";
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
+    echo "hello";
     function validate($data)
     {
         $data = trim($data);
@@ -14,7 +16,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = validate($_POST['password']);
 
     $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+    echo "hello";
     $result = mysqli_query($conn, $sql);
+    echo "hello2";
 
 
     if (mysqli_num_rows($result) === 1) {
