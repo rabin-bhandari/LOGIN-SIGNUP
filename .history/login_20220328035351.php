@@ -15,10 +15,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = validate($_POST['password']);
 
     $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-    echo "hello";
     $result = mysqli_query($conn, $sql);
-    echo "hello2";
-
 
     if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);
@@ -35,6 +32,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         exit();
     }
 } else {
+    echo "hello2";
+
     header("Location: index.php");
     exit();
 }
